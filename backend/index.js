@@ -4,7 +4,7 @@ const multer=require('multer');
 const path=require("path")
 //initialization
 const app =express();
-
+require("./database");
 //settings
 
 app.set("port",3000);
