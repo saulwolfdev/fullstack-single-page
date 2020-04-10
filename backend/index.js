@@ -23,8 +23,15 @@ app.use(multer({storage}).single("image"));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json())
 
-//start the server
+//routes
+app.use("/api/book",require("./routes/books"))
 
+//static files
+app.use(express.static(path.join(__dirname,"public")))
+
+
+
+//start the server
 app.listen(app.get("port"), () => {
   console.log("Server on port", app.get("port"));
 });
