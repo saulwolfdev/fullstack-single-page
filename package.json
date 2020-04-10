@@ -17,7 +17,8 @@
     "nodemon": "^2.0.3"
   },
   "scripts": {
-    "dev": "nodemon backend/index.js"
+    "dev": "cross-env NODE_ENV=development  nodemon backend/index.js",
+    "start": "cross-env NODE_ENV=production node backend/index.js"
   },
   "repository": {
     "type": "git",
