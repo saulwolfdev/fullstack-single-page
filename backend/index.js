@@ -5,14 +5,14 @@ if(process.env.NODE_ENV!=="production"){
 const express=require("express");
 const morgan=require("morgan");
 const multer=require('multer');
-const path=require("path")
+const path=require("path");
+const cors=require("cors");
 
 //initialization
 const app=express();
 require("./database");
 
 //settings
-// app.set("port",3000);
 app.set("port",process.env.PORT||3000);
 
 //middlewares
@@ -26,13 +26,13 @@ const storage=multer.diskStorage({
 
 app.use(multer({storage}).single("image"));
 app.use(express.urlencoded({extended:false}));
-app.use(express.json())
-
+app.use(express.json());
+app.use(cors());
 //routes
-app.use("/api/book",require("./routes/books"))
+app.use("/api/book",require("./routes/books"));
 
 //static files
-app.use(express.static(path.join(__dirname,"public")))
+app.use(express.static(path.join(__dirname,"public")));
 
 
 //start the server
