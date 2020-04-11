@@ -8,7 +8,7 @@ const multer=require('multer');
 const path=require("path")
 
 //initialization
-const app =express();
+const app=express();
 require("./database");
 
 //settings
