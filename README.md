@@ -1,3 +1,3 @@
 # fullstack-single-page
 
-aplicacion con solo tecnologias js
+Aplicacion completa solo con tecnologia Javasript, usando node en el servidor con express en el frontend handlebars, webpack,sass,bootstrap
