@@ -19,4 +19,5 @@ document.querySelector("#book-form").addEventListener("submit", (e) => {
 
   const bookService = new BookService();
   bookService.postBook(formData);
+  
 });
