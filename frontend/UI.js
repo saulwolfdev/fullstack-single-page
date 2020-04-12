@@ -2,7 +2,6 @@ import BookService from "./services/BookService";
 
 const bookService = new BookService();
  import {format} from "timeago.js";
-
 class UI {
   async renderBooks() {
     const books = await bookService.getBooks();
