@@ -6,7 +6,6 @@ const bookService = new BookService();
 class UI {
   async renderBooks() {
     const books = await bookService.getBooks();
-
     const booksCardContainer = document.querySelector("#books-cards");
     booksCardContainer.innerHTML = "";
     books.forEach((book) => {
@@ -46,7 +45,20 @@ class UI {
   clearBookForm() {
     document.querySelector("#book-form").reset();
   }
-  renderMessage(){}
+  renderMessage(message,colorMessage,secondsToRemove){
+	 const div=document.createElement("div");
+	 div.className=`alert alert-${colorMessage} message`;
+	 div.appendChild(document.createTextNode(message));
+	 
+	 const container = document.querySelector(".messageState");
+	 const bookForm = document.querySelector("#book-form");
+	 container.insertBefore(div, bookForm)
+	 
+	 setTimeout(()=>{
+		 document.querySelector(".message").remove()
+	 },secondsToRemove)
+	 
+  }
   async deleteBook(bookId){
 	  await bookService.deleteBook(bookId)
 	  this.renderBooks();

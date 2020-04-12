@@ -1,6 +1,11 @@
 @import "~bootstrap/scss/bootstrap";
 
-*{
+* {
     padding: 0;
     margin: 0;
+}
+
+.custom-file-input,
+.custom-file-label{
+ cursor: pointer;   
 }
