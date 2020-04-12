@@ -20,7 +20,7 @@ class UI {
 				<div class="col-md-8">
 					<div class="card-body">
 						<div class="card-body px-2">
-							<h5 class="card-title">${book.title}e</h5>
+							<h5 class="card-title">${book.title}</h5>
 							<p class="card-text"> ${book.author} </p>
 							<a href="#" class="btn btn-danger delete" _id="${book._id}">X</a>
 						</div>
