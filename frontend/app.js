@@ -1,14 +1,13 @@
-
 import("bootstrap");
 import("animate.css");
 require("./sass/main.scss");
- import UI from "./UI";
+import UI from "./UI";
 
- document.addEventListener("DOMContentLoaded", () => {
-   const ui = new UI();
-   ui.renderBooks();
- });
- 
+document.addEventListener("DOMContentLoaded", () => {
+  const ui = new UI();
+  ui.renderBooks();
+});
+
 document.querySelector("#book-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const title = document.querySelector("#title").value;
@@ -22,6 +21,16 @@ document.querySelector("#book-form").addEventListener("submit", (e) => {
   formData.append("author", author);
   formData.append("isbn", isbn);
 
-  const ui=new UI();
-  ui.addANewBook(formData); 
+  const ui = new UI();
+  ui.addANewBook(formData);
+});
+
+document.querySelector("#books-cards").addEventListener("click", (e) => {
+  if (e.target.classList.contains("delete")) {
+    const ui =new UI();
+    ui.deleteBook( e.target.getAttribute("_id"));
+    
+    // console.log("deleting", e.target.getAttribute("_id"));
+  }
+  e.preventDefault();
 });

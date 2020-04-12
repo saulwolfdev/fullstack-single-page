@@ -34,12 +34,10 @@ class UI {
 		</div>
 	  `;
 	  booksCardContainer.appendChild(div);
-	  
     });
 
     console.log("=>", books);
   }
-
   async addANewBook(book) {
     await bookService.postBook(book);
 	this.clearBookForm();
@@ -47,6 +45,11 @@ class UI {
   }
   clearBookForm() {
     document.querySelector("#book-form").reset();
+  }
+  renderMessage(){}
+  async deleteBook(bookId){
+	  await bookService.deleteBook(bookId)
+	  this.renderBooks();
   }
 }
 export default UI;

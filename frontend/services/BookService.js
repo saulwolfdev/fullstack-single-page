@@ -6,15 +6,17 @@ class BookService{
     
     async getBooks(){
         const response=await fetch(this.URI);
-        const books= await response.json();
-        return books; 
+        const books=await response.json();
+        console.log("get=>", books); 
+        return books;
     }
     async postBook(book){
         const response=await fetch(this.URI,{
             method:"POST",
             body:book 
         })
-        const data= await response.json() 
+        const data=await response.json()
+         console.log("post=>", data);  
     }
     async deleteBook(bookId){
         const response=await fetch(`${this.URI}/${bookId}`, {
@@ -24,7 +26,7 @@ class BookService{
             method: "DELETE",
         });
        const data = await response.json();
-       console.log("=>>>>>>>>",data) 
+       console.log("delete=>",data) 
     }
 }
 module.exports=BookService;
