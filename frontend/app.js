@@ -1,8 +1,8 @@
-import BookService from "./services/BookService";
 
 import("bootstrap");
 import("animate.css");
 require("./sass/main.scss");
+ import UI from "./UI";
 
 document.querySelector("#book-form").addEventListener("submit", (e) => {
   e.preventDefault();
@@ -17,7 +17,6 @@ document.querySelector("#book-form").addEventListener("submit", (e) => {
   formData.append("author", author);
   formData.append("isbn", isbn);
 
-  const bookService = new BookService();
-  bookService.postBook(formData);
-  
+  const ui=new UI();
+  ui.addANewBook(formData); 
 });
