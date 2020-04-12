@@ -38,41 +38,52 @@
             </ul>
         </div>
     </nav>
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-6">
-                    <form id="book-form" class="card card-body">
-                        <div class="form-group">
-                            <input type="text" id="title" class="form-control" placeholder="book" autofocus>
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-6">
+                <form id="book-form" class="card card-body">
+                    <div class="form-group">
+                        <input type="text" id="title" class="form-control" placeholder="book" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="author" class="form-control" placeholder="author">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="isbn" class="form-control" placeholder="isbn">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="image">
+                            <label for="image" class="custom-file-label">Choose Image</label>
                         </div>
-                        <div class="form-group">
-                            <input type="text" id="author" class="form-control" placeholder="author">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="isbn" class="form-control" placeholder="isbn">
-                        </div>
-                        <div class="input-group mb-3">
-                            <div class="custom-file">
-                                
-                                <input type="file" class="custom-file-input"  id="image">
-                                <label for="image" class="custom-file-label">Choose Image</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save book</button>
+                </form>
+            </div>
+            <div class="col-6">
+                <div id="books-cards">
+                    <div class="card m-2">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="${book.imagePath}" class="img-fluid" alt="">
                             </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Save book</button>
-                    </form>
-                
-                </div>
-                <div class="col-6">
-                    <div class="card" id="books-cards">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <div class="card-body px-2">
+                                        <h5 class="card-title">${book.title}e</h5>
+                                        <p class="card-text"> ${book.author} </p>
+                                        <a href="#" class="btn btn-danger delete" _id="${book._id}">X</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        ${book.created_at}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
 </body>
 
 </html>

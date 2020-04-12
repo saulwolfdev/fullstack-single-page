@@ -4,6 +4,11 @@ import("animate.css");
 require("./sass/main.scss");
  import UI from "./UI";
 
+ document.addEventListener("DOMContentLoaded", () => {
+   const ui = new UI();
+   ui.renderBooks();
+ });
+ 
 document.querySelector("#book-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const title = document.querySelector("#title").value;
