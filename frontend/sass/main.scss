@@ -24,6 +24,7 @@ body {
     font-weight: 300;
     font-size: 32px;
 }
+
 .delete,
 .btn .btn-danger {
     border-radius: 20px;
@@ -33,6 +34,10 @@ body {
     background-color: white;
 }
 
-.navbar .navbar-expand-lg {
+.navbar.navbar-expand-lg {
+    width: 100%;
+}
+
+.bg-light{
     width: 100%;
 }
