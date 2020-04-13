@@ -4,25 +4,35 @@
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     background-color: rgb(228, 228, 228);
 }
+
 .custom-file-input,
-.custom-file-label{
- cursor: pointer;   
+.custom-file-label {
+    cursor: pointer;
 }
-.card-title{
+
+.card-title {
     text-transform: uppercase;
     font-size: 26px;
     font-weight: 700;
 }
-.card-text{
-font-weight: 300;
+
+.card-text {
+    font-weight: 300;
     font-size: 32px;
 }
-.btn .btn-danger{
-border-radius: 20px;
+.delete,
+.btn .btn-danger {
+    border-radius: 20px;
 }
-.card-footer{
+
+.card-footer {
     background-color: white;
+}
+
+.navbar .navbar-expand-lg {
+    width: 100%;
 }
