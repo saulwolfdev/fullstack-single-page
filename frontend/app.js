@@ -33,7 +33,6 @@ document.querySelector("#books-cards")
     const ui =new UI();
     ui.deleteBook( e.target.getAttribute("_id"));
     ui.renderMessage("Book removed", "danger",3000);
-    // console.log("deleting", e.target.getAttribute("_id"));
   }
   e.preventDefault();
 });
