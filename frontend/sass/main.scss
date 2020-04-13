@@ -11,3 +11,18 @@ body{
 .custom-file-label{
  cursor: pointer;   
 }
+.card-title{
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 700;
+}
+.card-text{
+font-weight: 300;
+    font-size: 32px;
+}
+.btn btn-danger{
+border-radius: 20px;
+}
+.card-footer{
+    background-color: white;
+}
