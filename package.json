@@ -45,8 +45,8 @@
         "dev": "cross-env NODE_ENV=development  nodemon backend/index.js --ignore frontend",
         "start": "cross-env NODE_ENV=production node backend/index.js",
         "postinstall": "npm run build",
-        "dev-server": "webpack-dev-server --open  --port-8081 development",
-        "build": "cross-env NODE_ENV=production webpack production"
+        "dev-server": "webpack-dev-server --open  --port-8081",
+        "build": "cross-env NODE_ENV=production webpack"
     },
     "repository": {
         "type": "git",
